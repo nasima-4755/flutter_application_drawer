@@ -12,6 +12,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.man),
+            label: "Profile",
+          )
+        ]),
         drawer: Drawer(
           child: ListView(
             children: [
@@ -20,9 +30,9 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Icon(
-                      Icons.home,
+                      Icons.card_travel,
                       size: 60,
-                      color: Colors.blue,
+                      color: const Color.fromARGB(255, 8, 8, 8),
                     ),
                     TextButton(onPressed: () {}, child: Icon(Icons.close)),
                   ],
@@ -43,7 +53,7 @@ class MyApp extends StatelessWidget {
         ),
         appBar: AppBar(
           title: const Text('Drawer'),
-          backgroundColor: Colors.blue,
+          backgroundColor: const Color.fromARGB(255, 152, 25, 236),
           elevation: 10,
           centerTitle: true,
         ),
@@ -51,9 +61,11 @@ class MyApp extends StatelessWidget {
             child: Column(
           children: [
             Image.network(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfrtq8ddSfekNypcgtvBS5r-f3l1rGtfEgzw&s"),
+                "https://i0.wp.com/picjumbo.com/wp-content/uploads/wooden-pier-free-image.jpeg?w=600&quality=80"),
             Image.network(
-                "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"),
+                "https://h5p.open.ubc.ca/wp-content/uploads/h5p/content/24/images/file-6113d5f8845dc.jpeg"),
+            Image.network(
+                "https://www.shutterstock.com/image-photo/nature-hdr-background-260nw-190456199.jpg"),
           ],
         )),
       ),
